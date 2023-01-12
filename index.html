@@ -7,16 +7,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Belly Button Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
 
+
+</head>
+<style>
+ 
+.jumbotron h1,p{
+  color: white;
+  font-family: Verdana;
+  text-shadow: 1px 1px 1px black, 2px 2px 1px black;
+}
+</style>
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron text-center" style="background-image: 
+      url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/EscherichiaColi_NIAID.jpg/640px-EscherichiaColi_NIAID.jpg');
+      opacity: 0.7">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
+       
       </div>
+    <div class ='row' style="text-align:center; font-size: 18px; color: black"> 
+       <h4>¡Use 'Test Subject ID No.' to find the demographic information and visualize the
+      top 10 bacterial species in the subjects belly button! </h4> <br></div>
     </div>
     <div class="row">
       <div class="col-md-2">
@@ -24,17 +39,20 @@
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
+        <div class="panel panel-primary" style="font-family: Verdana">
+          <div class="panel-heading" style="background-color: skyblue">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        <div id="bar">
+        
+      </div>
       </div>
       <div class="col-md-5">
+        <h2>Curious about how clean it is?</h2>
         <div id="gauge"></div>
       </div>
     </div>

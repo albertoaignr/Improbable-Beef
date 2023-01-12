@@ -87,7 +87,8 @@ function buildCharts(sample) {
       x: sample_values.slice(0,10).reverse(),
       y: yticks,
       type: 'bar',
-      orientation: 'h'
+      orientation: 'h',
+      marker: {color: 'palegreen'}
     }
 
     ];
@@ -99,7 +100,7 @@ function buildCharts(sample) {
         l: 140,
       },
       title: {
-        text: 'Top 10 Bacteria Cultures Found',
+        text: '<b>Top 10 Bacteria Cultures Found</b>',
       }
     };
 
@@ -109,7 +110,6 @@ function buildCharts(sample) {
     var bubbleData = [ {
       x: otu_ids,
       y: sample_values,
-      text: otu_labels,
       mode:'markers',
       marker: {
         color: otu_ids,
@@ -123,7 +123,7 @@ function buildCharts(sample) {
     ];
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: 'Bacteria Cultures Per Sample',
+      title: '<b>Bacteria Cultures Per Sample</b>',
       hovermode: 'closest',
       hovertext: otu_labels,
       hoverinfo: 'text',
